@@ -35,6 +35,30 @@
 			 等同于git log ^since until
 			 也可表示为两个不同版本库的提交，其中包括在until的提交单不在since中的提交，并且until已并入since中的提交不算入until中
 			 疑惑：git log until...since也有此功能
+		9.git log --follow：显示某文件所有变更
+	6.删除文件：git rm
+		1.git rm：只能用于已经提交过的文件，恢复使用git checkout -- file
+		2.git rm --cached：将已添加的文件变为修改（modified）的文件
+		3.git rm -f：强制删除已经add和commit过的文件，但对新建的文件（夹）不起作用
+	7.回退版本库：git reset
+		1.git reset --hard HEAD~n/hash：回到指定的版本(旧的版本和新的版本）
+			  若为回到新的版本库，在不知道hash值的情况下，用git reflog获取哈希值
+	8.创建合并分支：git branch
+		1.创建分支：git branch dev
+		2.切换到分支：git checkout dev
+		3.创建并切换到分支：git checkout -b dev
+		4.查看分支：git branch
+		5.删除分支：git branch -d dev
+		6.合并分支：git merge dev
+	9.远程：
+		1.链接到远程仓库：git remote add origin master
+		2.将本地分支推送到远程：git push -u origin master
+		3.将远程仓库克隆到本地：git clone url
+	10.隐藏工作现场：git stash
+		1.查看隐藏的工作现场：git stash list
+		2.恢复工作现场：git stash apply(stash不删除），删除stash用git stash drop
+			       git stash pop（同时删除stash）
+	11.移动：git mv lod new
 		 	 
 4.符号解释：
 	^：用来选择不同的父提交，例如：
