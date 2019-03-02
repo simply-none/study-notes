@@ -39,11 +39,28 @@
 插入网络上/GitHub仓库的图片，方法是： ![文字描述](网址url "鼠标悬停显示文本"),当图片网址不存在时显示文字描述。
 
 
+给图片加上超链接
+如果你想使图片带有超链接的功能，即点击一个图片进入一个指定的网页。??????
 
-[![baidu]](http://baidu.com)
-[baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"
-
-
+插入代码片段，用三个```tab键上面的键括起来即可```
+```
+public class Example1{
+	public static void main(String args[]){ 
+    //i是表示月份的，这里计算了36个月，也就是三年，兔子的数量
+	  int i;
+	  long arr[]=new long[36];   //这个数组时用来计算每月有兔子的对数
+	  arr[0]=arr[1]=1;
+	  System.out.println("第1个月有兔子1对"+", "+"总数是"+2);
+	  System.out.println("第2个月有兔子1对"+", "+"总数是"+2);
+	  for(i=2;i<=35;i++){
+		 arr[i]=arr[i-1]+arr[i-2];
+		 System.out.println("第"+i+"个月有兔子"+arr[i]+"对"+", "+"总数是"+2*arr[i]);
+		     //规律是 每个数字都是前面两个数字之和
+		 }
+   }
+		
+}
+```
 
 
 
