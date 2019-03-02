@@ -14,6 +14,13 @@
 ###### 六级标题
 
 文本：
+
+斜体用一个星*号括起来*，或者下划线括起来
+
+粗体用2个星号或下划线括起来**粗体**，__粗体__
+
+粗斜体用3个星号或下划线括起来，***粗斜体***，___粗斜体___。
+
 文本换行使用可以使用<br>第二行，直接回车不能换行
 显示特殊标签需要转义符‘\’
 
@@ -64,6 +71,13 @@ public class Example1{
 
 
 
+```
+@Override
+protected void onDestroy() {
+    EventBus.getDefault().unregister(this);
+    super.onDestroy();
+}
+```
 
 
 
