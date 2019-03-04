@@ -1,3 +1,4 @@
+<a id="head"/>
 
 
 [10]:http://www.google.com "Google"
@@ -125,3 +126,4 @@ protected void onDestroy() {
 * [ ] 看书
 * [x] 写字
 
+<a href="#head">`点这里从头再读一遍`</a>
