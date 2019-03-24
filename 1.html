@@ -105,5 +105,42 @@ embed标签（已被object标签替代，
     autostart（true，false），loop（true，false，-1等，循环效果无效，只能手动点击添加）
 bgsound标签（背景音乐标签，只适用于ie）
 iframe标签：页面子框架，属性有：src，width，height，scrolling（auto，yes，no滚动条）
+
+
+CSS（cascading style sheet2.0）基础：
+css引用方式：（先加载css再加载html）
+    外部样式表（<link href="#" rel="stylesheet" type="text/css"/>
+    内部样式表（<style type="text/css"></style>）
+    内联样式表（eg:<p style="background: black"></p>）
+    import导入样式（先加载html再加载css）
+id属性与class属性
+css选择器：
+    元素（元素名），id（#id名），class（.class名），
+    子元素选择器（父元素 字元素），相邻选择器（前一个兄弟元素+后一个兄弟元素），
+    群组选择器（第一个元素,第二个元素,...）
+字体样式：
+font-family：可多个字体用逗号隔开
+font-size（字体的高宽）：一般采使用像素为单位，关键字值由small，medium，large配合x-使用。
+color：采用十六进制（#abcdef）或颜色关键字表示
+font-weight：一般使用关键字（lighter（较细），normal400，bold700，bolder），不建议使用数值（100~900）
+font-style：斜体，normal正常，italic斜体
+css注释：/*...*/
+css文本属性：
+text-decoration：none（默认值，去掉上中下划线，例如超链接），underline（下划线用于文章重点说明），
+                line-through（中划线，价格促销），overline（顶划线）
+text-transform：none，uppercase（转换为大写），lowercase（转换为小写），capitalize（单词首字母大写）
+font-variant：极少使用，把文本设置成小型大写字母，normal，small-caps
+text-indent：首行缩进，通常为font-size值的两倍（缩进2个字符）
+text-align：文本水平对齐方式，left，center，right
+line-height：像素值;
+letter-spacing：字间距，很少使用
+word-spacing：词间距
+边框样式：合并写法（border:width style color;）
+border-width：0表示边框宽度为0，但实际上还存在
+border-style：边框的线条形式，none（无样式），solid实线，dashed（断实线），dotted（点线），double（双线条），
+            inset（内凹，左上内部明显），outset（外凸，右下外部明显），
+            ridge（脊线，左上内与右下外），groove（槽线，左上外与右下内）
+border-color：
+局部边框样式（border-配合top，left，bottom，right使用）
 </body>
 </html>
