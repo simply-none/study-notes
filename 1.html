@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--网页关键字,多个关键字用逗号隔开-->
+    <meta name="keyword" content="html入门，css入门，JavaScript入门"/>
+    <!--网页描述-->
+    <meta name="description" content="html从小白到大牛"/>
+    <!--作者-->
+    <meta name="author" content="yuyuan"/>
+    <!--版权信息-->
+    <meta name="copyright" content="版权所有，侵权必究"/>
+    <!--定义页面使用的语言-->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <!--页面刷新-->
+    <meta http-equiv="refresh" content="5;url=#"/>
+    <title>Title</title>
+    <script type="text/javascript">
+
+    </script>
+    <link href="1.html" rel="stylesheet">
+</head>
+<body>
+前端基础知识：
+    html是网页的结构
+    css是网页的外观
+    JavaScript是网页的行为
+    静态网页：缺乏与用户的交互
+    前端：html（hyper text markup language），css，JavaScript，html5，css3，ajax（asynchronous异步 JavaScript and xml，seo（search engine optimization）
+动态网页技术：php，jsp，asp.net
+    学习路线：HTML→CSS→JavaScript→jQuery→CSS3→HTML5→ASP.NET（或PHP）→AJAX
+<h1>文章标题(只有一个)</h1>
+<h2>大标题</h2>
+<h6>标题</h6>
+<p>段落</p>
+<br/>换行
+    记住标签的语义就是理解该标签的释义
+粗体尽量使用<strong></strong>而非<b></b>:标签的语义性
+斜体尽量使用<em></em>,而非<cite></cite>和<i></i>
+上标：sup，下标：sub
+大号字体：big ，小号字体：small，两者均很少使用，可用css代替，但为了网页语义化，small可用于网页底部的版权声明
+删除标签：s，用css代替，删除线效果采用text-decoration：line-through实现
+下划线标签：u，用css代替
+水平线标签：hr（horizon）
+div标签：为文档内大块内容提供结构和css样式控制，division，用来划分一个区域
+可输入的特殊符号：双引号&quot;左单引号&lsquo;右单引号&rsquo;乘号&times;除号&divide;
+                小于号&lt;大于号&gt;与&amp;长破折号&mdash;竖线&#124;空格&nbsp;
+自闭合标签：没有结束符，只能定义自身的一些属性
+meta,link,base,br,hr,input,img，embed。
+html元素分为块元素block和行内元素inline
+常见块元素：div，h1~6，p，hr，ol，ul（独占一行，排斥其他元素与其位于同一行）
+常见行内元素：strong，em，span，img，input（可与其他元素位于同一行，内部不能容纳块元素）
+列表：在列表元素中只能含有列表元素，不能有其他的非列表元素，列表可以嵌套列表
+有序列表ol（ordered list）：li（list item）文本只能放在li元素内部
+ol的type属性值：1，a，A，i，I。 # type属性在css中用list-style-type实现
+无序列表ul（unordered list）：
+ul的type属性值：disc实心圆，circle空心圆，square实心正方形，  # type属性同样由list-style-type实现
+无序列表：凡是需要展示型信息的地方都用到了无序列表，比如百度首页，网页导航
+定义列表（definition list）：dt（definition term）：dd（definition description）
+形式：<dl>名词定义<dt>名词解释</dt><dd></dd>...<dt></dt><dd></dd></dl>
+dd标签只能在dl中使用，dd标签会缩进文本
+表格基本结构：table，caption（标题），thead，tr，th，tbody，tr，td，tfoot，tr，td
+tr：table row；td：table data cell。th（文本会加粗）：table header；
+默认情况下，表格无边框
+thead，tbody，tfoot作用使得代码更有语义化、方便控制表格的css样式
+td的属性：合并行rowspan，合并列colspan，属性值为数字
+图像标签img（image）：
+    必要属性：src（source源文件），alt（设置图片描述信息，给搜索引擎看的），title（鼠标移至图片时给用户的提示文字）
+    相对路径（同一目录下直接引用）、绝对路径
+图片或文件建议使用英文名
+位（bit)图（点阵图）：由像素组成，分为8位，16位，32位，
+    位指的是颜色的种类，比如8位图有2的8次方种颜色
+    位图一般选用24位，32位图体积更大，使得浏览器页面加载速度变慢（肉眼难以分辨24和32位图）
+    位图放大缩小均会使得图片失真（像素变化）
+    位图格式：jpg（适用于色调复杂绚丽的图片），png（适用简单的图片，网页专用格式），gif（表达动画效果）
+矢量图（向量图）：图像不会失真，但难以表达色彩丰富的图像效果），后缀一般有ai，cdf，fh，swf（flash）
+超链接a：外部链接，内部链接（链接到同一个网站），
+    电子邮件链接，锚点链接（适用于页面过于长的页面，跳到当前页面的某一部分），空链接，脚本链接。
+属性href（Hypertext Reference）：表示链接至的地址
+属性target(目标窗口的打开方式）的值：_self（当前），_blank（新窗口），_top（顶层框架），_parent（上一层）
+
+表单标签结构：form，input，textarea，（select，option）
+form属性（后端技术）：name（便于区分各种表单），action（指定表单数据的处理地址），
+    method（表单数据的http提交方法值为get，post等），target（同a标签），
+    enctype（表单信息提交的编码方式，有默认值和multipart/form-data（mime编码，有上传文件必须选择此属性））
+input标签：
+type属性：text（配套的属性value默认值，size框的长度，maxlength字符输入最大长度），
+        password（配套属性同text），radio（单选框，配套属性有name（同一组必须相同），value，checked），
+        checkbox（复选框，配套属性有id（同一组中id值要相同），value，checkout，其中要配合label标签使用，label标签的for属性指向其id值）
+        button（普通按钮，配套属性有value（按钮上的值），onclick（按钮点击事件）），
+        submit（提交按钮，配套属性有value（按钮值）），reset（重置按钮，配套属性有value（按钮值），只能清除同一表单的值）。
+        image（图片域，有按钮和图片的特点，配套属性有src，在开发中，能用css实现的就不用图片实现），hidden（隐藏域，向后端传送不想让用户看到的数据，实际开发中不要用它传递敏感重要的信息）
+        file（文件上传，必须说明编码方式）
+textarea标签：配套属性有rows，cols等。
+select（下拉列表，配合option使用）：
+select属性：multiple（设置可选择的项数，默认为1，用CTRL+鼠标左键选择），size（列表展开后的可见列表项数）
+input标签按钮与button标签按钮区别：button标签按钮实现功能更强大，但不能提交数据到服务器，然而真正开发按钮都是用div标签结合css实现的）
+表单元素不一定要放在form标签内，但与服务器进行交互则必须要放在该标签内）
+
+embed标签（已被object标签替代，
+    大多数现代浏览器已经弃用并取消了对浏览器插件的支持，
+    所以如果您希望您的网站可以在普通用户的浏览器上运行，
+    那么依靠 <embed> 通常是不明智的。（
+    支持大部分主流多媒体文件格式，属性有src，width，height，
+    hidden（false（默认），true（隐藏面板），ie中为空或为true时隐藏），Firefox不支持，chrome中为true隐藏，
+    autostart（true，false），loop（true，false，-1等，循环效果无效，只能手动点击添加）
+bgsound标签（背景音乐标签，只适用于ie）
+iframe标签：页面子框架，属性有：src，width，height，scrolling（auto，yes，no滚动条）
+</body>
+</html>
