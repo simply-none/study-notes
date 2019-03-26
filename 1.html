@@ -188,6 +188,19 @@ font-variant：极少使用，把文本设置成小型大写字母，normal，sm
 text-indent：首行缩进，通常为font-size值的两倍（缩进2个字符）
 text-align：文本水平对齐方式，left，center，right
 line-height：像素值;
+    line-height：两行基线之间的垂直距离。
+    行距指的是上一行底线到下一行顶线的垂直距离，即两行文字之间的空隙
+    一行文字的高度由line-height决定，而height决定整个块的高度。
+    利用line-height=height实现单行文字的垂直对齐。
+    line-height是可继承的，但是自身设置的值比继承的优先级更高。
+    当line-height取值为%或em时的值计算：
+        line-height = 父元素font-size 乘以（自定义或继承父元素line-height的%或em的值。
+                <!---->
+    <!---->line-height的值？？？？？？
+    实验结论：若本身没有设置line-height，则算法如上，
+    若本身设置了line-height，则是自身元素的font-size乘以line-height。
+    当line-height的取值为一个数字时，line-height=自身元素的font-size乘以line-height的系数。
+    <!---->
 letter-spacing：字间距，很少使用
 word-spacing：词间距
 边框样式：合并写法（border:width style color;）
@@ -224,8 +237,20 @@ a：actived(鼠标单击瞬间的样式)
 图片样式：
 width,height：在实际开发中，图片的实际尺寸应该跟网页中使用的尺寸相同或相似，避免数据传输过大，影响页面的加载速度
 border:width，style，color;
-text-align：只对文本和img标签有效
-vertical-align：垂直对齐，值有top，middle，baseline，bottom，垂直对齐指行内元素相对于该元素的对齐方式。
+
+text-align（水平对齐方式，在父元素定义，里面的元素居中）：只对文本和inline元素，inline-block有效，对块元素不起作用：属性值有left，right，center，justify（两端对齐，较少用）
+    用于首行缩进，在h1标签中，隐藏文字（仍然能够占据seo权重）利用背景图片设置logo。
+    text-align：-9999px；
+    margin:0 auto;：实现块元素的水平居中对齐方式，在当前元素定义，然后该元素相对于父元素水平居中
+
+vertical-align：垂直对齐，值有top，middle，baseline，bottom，
+    用于定义周围的文字，inline元素，以及inline-block元素相对于该元素基线的垂直对齐方式
+    vertical-align属性对table-cell类型（针对自身元素有效，定义的是子元素相对于自身的对齐方式），对块元素类型无效。
+    vertical-align属性允许指定负值（相对于基线向下偏移）和百分比%（相对于当前元素line-height的值设置）。
+    （在div中实现图片垂直居中）
+
+
+
 文字环绕效果：float：值有left，right，none（默认）
 定义图片与文字的间距：使用margin-加上top，bottom，left，right
 列表项符号样式：list-style-type
@@ -244,6 +269,15 @@ padding或margin的写法：
 padding：20px；
 padding：20px 40px；上下，左右
 padding：20px 40px 60px；上，右左，下
+border：0与border：none的区别：
+    border：0虽然看不见，但是浏览器还是会对border进行渲染，只是像素为0，需占用内存。
+    border：none浏览器不渲染，不占内存。
+外边距叠加（只有垂直外边距,只针对类块元素）的情况：，叠加之后的外边距高度等于发生叠加之前的两个外边距中的最大值。
+    同级元素，父子元素（未设置内边距和边框的情况下),
+负margin技术：
+    针对普通文档流元素：当margin任一方向值为负时，拉向左上角（向左或向上拉）
+    针对浮动元素：即拉向其浮动的方向。左上或右上
+负margin技巧：图片与文字对齐，自适应两列布局，元素垂直居中，tab选项卡
 去除元素默认的边框：{padding:0;margin:0;}。
     去除默认的列表项样式：{list-style-type:none;}。
 浮动布局：
@@ -253,6 +287,10 @@ padding：20px 40px 60px；上，右左，下
 设置了浮动属性的盒子会使得盒子及其中的内容一起浮动，值有left，right，（none，inherit很少用）
 清除浮动clear：属性值有left，right，both：清除浮动后前面元素产生的浮动对该元素不会产生影响。
 清除浮动还可使用overflow:hidden;来实现。
+
+overflow属性：定义当内容溢出元素边框时发生的事情
+    overflow取值：visible（默认，内容溢出可见），hidden（内容溢出隐藏），scroll（内容溢出显示滚动条），auto（自动调整）
+    用途：显示滚动条，隐藏内容，清除浮动（当子元素设置为浮动时，父元素高度塌陷，适用于父元素未设置高度时）。
 
 
 布局定位：position
@@ -363,6 +401,36 @@ css书写：书写顺序
     文本型属性：font-，line-height，text-align，text-indent，vertical-align等
     装饰属性：color，background，opacity，cursor
     其他属性：。。。
+css注释：
+    顶部注释：
+    /*
+    *@description:说明
+    *@author:作者
+    *@update:更新时间，如2016-4-19 18:30
+    */
+    模块注释：
+    /*某部分，开始*/
+    ……
+    /*某部分，结束*/
+    简单注释：关键代码（单行，多行注释）
+    避免压缩工具删除注释：使用/*!注释内容*/
+css reset：重置样式：去除元素在浏览器的默认样式，不同浏览器样式不同。
+CSS reset代码必须在其他CSS之前引入,应该根据个人需求不同来定义(可有可无）
+块元素的特点：独占一行，可定义width，height，margin。
+行内元素特点：无法设置width，height，margin-top，margin-bottom。
+inline-block元素特点：可以定义width，height，可以与其他行内元素位于同一行，常见的inline-block元素有：input和img。
+ inline-block元素有默认的外边距：在其父元素设置font-size=0可以消除外边距，或者使用负margin技术，letter-spacing，word-spacing实现。
+display:none;隐藏元素，被隐藏的元素不占据原来的位置，会被seo忽略。
+    visibility:hidden;元素被隐藏依然占据原来的位置，可根据属性的语义来区分含义。
+table-cell：让元素以表格单元格的形式呈现，
+    实现的功能有（配合其他属性使用）：图片垂直居中：vertical-align
+    等高布局（同一行单元格高度是相等的），，自动划分元素在一行显示（结合列表，导航栏）。
+
+    改变元素类型：display：属性值;
+    其中属性值有：inline，block，inline-block，table，table-row，table-cell，none（隐藏元素）
+
+
+
 
 </body>
 </html>
