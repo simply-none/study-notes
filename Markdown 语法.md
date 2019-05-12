@@ -85,12 +85,14 @@ _ _ _
 ### 参考式
     全球最大的搜索引擎是[Google][1]。
     [1]:https://www.google.com "Google"
+    
 全球最大的搜索引擎是[Google][1]。
+
 [1]:https://www.google.com "Google"
 ### 自动链接（url & email）也可以不用<>
     <https://www.google.com>
     <jousindea@gmail.com> 
-<https://www.google.com>
+<https://www.google.com>   
 <jousindea@gmail.com>       
 **[⬆ top](#目录)**
 
@@ -100,8 +102,10 @@ _ _ _
 ![图片不显示时显示提示文字(图片alt)](https://cdoco.com/images/duolaameng.jpeg "图片title")
 ### 参考式
     ![图片alt][duola]
-    [duola]:https://cdoco.com/images/duolaameng.jpeg "哆啦A梦"     
+    [duola]:https://cdoco.com/images/duolaameng.jpeg "哆啦A梦"  
+    
 ![图片alt][duola]
+
 [duola]:https://cdoco.com/images/duolaameng.jpeg "哆啦A梦"     
 **[⬆ top](#目录)**
 
