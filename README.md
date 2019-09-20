@@ -5,4 +5,4 @@
 
 [20190227-LinuxShell使用](https://yuyuanqiu.github.io/study-notes/20190227-LinuxShell使用)
 
-[Markdown语法](https://yuyuanqiu.github.io/study-notes/Markdown 语法)
+[Markdown语法](https://yuyuanqiu.github.io/study-notes/Markdown语法)
